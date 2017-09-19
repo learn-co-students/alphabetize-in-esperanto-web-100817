@@ -1,9 +1,10 @@
 require 'pry'
 
 def alphabetize(arr)
-  esperanto_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars
+  esperanto_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".split""
   new_array = arr.sort_by do |word_or_phrase|
-    word_or_phrase.chars.collect do |letter|
+    split_phrase = word_or_phrase.split""
+    split_phrase.collect do |letter|
         esperanto_alphabet.index(letter)
       end
   end
