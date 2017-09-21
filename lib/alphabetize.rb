@@ -3,7 +3,7 @@ def alphabetize(arr)
   alpha = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars
 
   arr.sort_by do |phrase|
-    alpha.index(phrase[0])
+    phrase.chars.map{ |c| alpha.index(c)}
   end
 
 end
